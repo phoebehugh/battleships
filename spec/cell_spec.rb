@@ -3,6 +3,10 @@ require 'cell'
 describe Cell do
   let(:cell) {Cell.new} 
  
+  it "can have a status" do
+    
+  end
+
   it "is not occupied when created" do
     expect(cell).not_to be_occupied
   end
@@ -12,7 +16,7 @@ describe Cell do
     expect(cell).to be_occupied
   end
   
-    it "can receive a hit" do
-      expect(cell.receive_hit).to be true
+    it "can receive a hit when occupied by a ship" do
+      expect(cell.hit!).to be true if :occupied
     end
 end

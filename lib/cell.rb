@@ -13,7 +13,7 @@ class Cell
     @occupied = true
   end
 
-  def receive_hit
+  def hit!
     @hit = true
   end
 
