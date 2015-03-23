@@ -11,5 +11,8 @@ describe Cell do
     cell.place_ship
     expect(cell).to be_occupied
   end
-
+  
+    it "can receive a hit" do
+      expect(cell.receive_hit).to be true
+    end
 end

@@ -2,6 +2,7 @@ class Cell
 
   def initialize 
     @occupied = false
+    @hit = false
   end
 
   def occupied?
@@ -11,4 +12,9 @@ class Cell
   def place_ship
     @occupied = true
   end
+
+  def receive_hit
+    @hit = true
+  end
+
 end
