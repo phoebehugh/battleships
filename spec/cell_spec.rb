@@ -1,8 +1,15 @@
 require 'cell'
 
 describe Cell do
+  let(:cell) {Cell.new} 
+ 
   it "is not occupied when created" do
-    cell = Cell.new
     expect(cell).not_to be_occupied
   end
+
+  it "is occupied when it receives a ship" do
+    cell.place_ship
+    expect(cell).to be_occupied
+  end
+
 end
